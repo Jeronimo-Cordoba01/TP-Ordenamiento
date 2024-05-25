@@ -13,6 +13,7 @@ def particionar(array, low, high):
 def quick_sort_iterativo(array):
     # Inicializar la pila con el rango completo del array
     array_vacio = [(0, len(array) - 1)]
+    contador = 0
     
 
     # Procesar el array mientras no esté vacía
@@ -31,20 +32,15 @@ def quick_sort_iterativo(array):
             # Si hay elementos a la derecha del pivote, agregar esos índices al array
             if pi + 1 < high:
                 array_vacio.append((pi + 1, high))
+            contador +=1
+    print(contador)
+
 
 #end = time.time()
-vector = [5,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,1,9,7,3,1,9,7,3,1,9,7,
-          3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
-          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
-          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,
-          1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
-          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
-          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,
-          1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
-          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3]
-print("Vector original:", vector)
-quick_sort_iterativo(vector)
-print("Vector ordenado:", vector)
+array = [3,0,1,4,7,2,5,6]
+print("Vector original:", array)
+quick_sort_iterativo(array)
+print("Vector ordenado:", array)
 
 start = time.time()
 end = time.time()
