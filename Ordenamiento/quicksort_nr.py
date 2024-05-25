@@ -1,5 +1,5 @@
 import time
-#start = time.time() #Medir el tiempo
+start = time.time()
 def particionar(array, low, high):
     pivote = array[high]
     i = low - 1
@@ -11,7 +11,7 @@ def particionar(array, low, high):
     return i + 1
 
 def quick_sort_iterativo(array):
-    # Inicializar la pila con el rango completo del array
+    # Iniciar la pila con el rango completo del array
     array_vacio = [(0, len(array) - 1)]
     contador = 0
     
@@ -36,13 +36,20 @@ def quick_sort_iterativo(array):
     print(contador)
 
 
-#end = time.time()
-array = [3,0,1,4,7,2,5,6]
+array = [5,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,1,9,7,3,1,9,7,3,1,9,7,
+          3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
+          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
+          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,
+          1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
+          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
+          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,
+          1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
+          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3]
 print("Vector original:", array)
 quick_sort_iterativo(array)
 print("Vector ordenado:", array)
 
-start = time.time()
+
 end = time.time()
 print(end)
 print(start)

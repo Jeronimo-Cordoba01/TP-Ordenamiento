@@ -1,21 +1,28 @@
-array = [3,0,1,4,7,2,5,6]
+import time
+start = time.time()
+array = [5,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,1,9,7,3,1,9,7,3,1,9,7,
+          3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
+          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
+          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,
+          1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
+          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
+          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,
+          1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,
+          7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3,1,9,7,3]
 contador = 0
-for i in range(1, len(array)): #i vale 1 y suma 1 por cada iteracion
-    numero_a_comparar = array[i] #nume a comparar vale array en posicion correspondiente por cada iteracion
+for i in range(1, len(array)): 
+    numero_a_comparar = array[i] 
     pivot = i -1 
     
-
-    while pivot >=  0 and numero_a_comparar < array[pivot]: #mientras que pivot sea mayor o igual a cero y numero a comparar
-#(array[i]) sea menor que array en la posicion que indique pivot (i-1) 
-#es decir, arranca comparando 0 con 3, y no al reves
-        #print(f"{array} 1")
-        array[pivot +1] = array[pivot] #array en posicion de pivot +1 va a ser igual al numero que correspondia a array en pivot
-        pivot -=1 #Se asegura de comparar con el numero a la izquierda
-
-    array[pivot +1] = numero_a_comparar #asigna el numero desordenado a la derecha
+    while pivot >=  0 and numero_a_comparar < array[pivot]: 
+        array[pivot +1] = array[pivot] 
+        pivot -=1 
+    array[pivot +1] = numero_a_comparar 
     contador += 1
+end = time.time()
         
 print(array)
 print(contador)
+print(f"Tiempo: {(end - start)*1000}ms")
 
         
