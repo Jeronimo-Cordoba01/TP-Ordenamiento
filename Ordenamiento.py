@@ -82,4 +82,3 @@ print(end)
 print(start)
 print(f"Tiempo: {(end - start)*1000}")
 
-#Hay una diferencia de tiempo entre esta version y la recursiva, siendo esta mas eficiente
